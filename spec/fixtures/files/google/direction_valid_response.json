@@ -1,0 +1,329 @@
+{
+  "geocoded_waypoints": [
+    {
+      "geocoder_status": "OK",
+      "place_id": "asdfasdfadfasd",
+      "types": [
+        "subpremise"
+      ]
+    },
+    {
+      "geocoder_status": "OK",
+      "place_id": "asdfasdf-7kvWg",
+      "types": [
+        "street_address"
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "bounds": {
+        "northeast": {
+          "lat": 343.6363092,
+          "lng": -34334.9144602
+        },
+        "southwest": {
+          "lat": 343.6250153,
+          "lng": -34334.9313356
+        }
+      },
+      "copyrights": "Map data ©2023",
+      "legs": [
+        {
+          "distance": {
+            "text": "1.8 mi",
+            "value": 2943
+          },
+          "duration": {
+            "text": "6 mins",
+            "value": 357
+          },
+          "end_address": "742 Evergreen Terrace, Springfield, USA'",
+          "end_location": {
+            "lat": 343.625756,
+            "lng": -34334.9144602
+          },
+          "start_address": "0001 Cemetery Lane, USA",
+          "start_location": {
+            "lat": 343.6350786,
+            "lng": -34334.9303075
+          },
+          "steps": [
+            {
+              "distance": {
+                "text": "213 ft",
+                "value": 65
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 22
+              },
+              "end_location": {
+                "lat": 343.6356653,
+                "lng": -34334.9303377
+              },
+              "html_instructions": "Head <b>north</b> toward <b>adsfadsf Dr</b>",
+              "polyline": {
+                "points": "gzb}Fl{twOi@BkA@"
+              },
+              "start_location": {
+                "lat": 343.6350786,
+                "lng": -34334.9303075
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "59 ft",
+                "value": 18
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 8
+              },
+              "end_location": {
+                "lat": 343.6356713,
+                "lng": -34334.9301162
+              },
+              "html_instructions": "Turn <b>right</b> toward <b>asdfadsf Dr</b>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "}}b}Fr{twO?k@"
+              },
+              "start_location": {
+                "lat": 343.6356653,
+                "lng": -34334.9303377
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "233 ft",
+                "value": 71
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 20
+              },
+              "end_location": {
+                "lat": 343.6363092,
+                "lng": -34334.93014409999999
+              },
+              "html_instructions": "Turn <b>left</b> onto <b>adfadsf Dr</b>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "}}b}FfztwOiA?K@i@@"
+              },
+              "start_location": {
+                "lat": 343.6356713,
+                "lng": -34334.9301162
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "279 ft",
+                "value": 85
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 12
+              },
+              "end_location": {
+                "lat": 343.6363034,
+                "lng": -34334.931169
+              },
+              "html_instructions": "Turn <b>left</b> onto <b>asdfasdf Dr</b>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "}ac}FjztwO?d@@fD"
+              },
+              "start_location": {
+                "lat": 343.6363092,
+                "lng": -34334.93014409999999
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "0.5 mi",
+                "value": 806
+              },
+              "duration": {
+                "text": "2 mins",
+                "value": 102
+              },
+              "end_location": {
+                "lat": 343.6291775,
+                "lng": -34334.93113749999999
+              },
+              "html_instructions": "Turn <b>left</b> at the 1st cross street onto <b>S fderer Rd</b>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "{ac}Fx`uwO?`@|ACt@?^AtBAz@?B?N?x@ARAlCAVAzAARAlBCxAAnFIx@AH?b@?`BAn@?"
+              },
+              "start_location": {
+                "lat": 343.6363034,
+                "lng": -34334.931169
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "0.7 mi",
+                "value": 1121
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 84
+              },
+              "end_location": {
+                "lat": 343.6292672,
+                "lng": -34334.91781019999999
+              },
+              "html_instructions": "Turn <b>left</b> onto <b>W fdfdfd St</b>/<wbr/><b>dfdf dfdf Rd</b>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "kua}Fr`uwOVA@YAcCAw@?G?MEaFCgC?W?oBAkB?aAAoCA_CCuDA{EA_EAaBAmC?[CkDCcDAuBAmA?yA"
+              },
+              "start_location": {
+                "lat": 343.6291775,
+                "lng": -34334.93113749999999
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "0.2 mi",
+                "value": 334
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 36
+              },
+              "end_location": {
+                "lat": 343.6264753,
+                "lng": -34334.9172147
+              },
+              "html_instructions": "Turn <b>right</b> onto <b>dffadf Dr</b>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "}ua}FhmrwOhB@t@?PARGRM`@Wd@e@DEb@_@DEROTKTENCLAPAP@RDNBHDPJXR"
+              },
+              "start_location": {
+                "lat": 343.6292672,
+                "lng": -34334.91781019999999
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "0.1 mi",
+                "value": 171
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 19
+              },
+              "end_location": {
+                "lat": 343.6250153,
+                "lng": -34334.91684959999999
+              },
+              "html_instructions": "Turn <b>left</b> onto <b>adfsLn</b>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "oda}FpirwOT[JKFENKHCHALAZA`A?B?fAA\\A"
+              },
+              "start_location": {
+                "lat": 343.6264753,
+                "lng": -34334.9172147
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "0.1 mi",
+                "value": 164
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 27
+              },
+              "end_location": {
+                "lat": 343.6258116,
+                "lng": -34334.9156581
+              },
+              "html_instructions": "Turn <b>left</b> onto <b>afsddaf Dr</b>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "k{`}FhgrwOAmA?U?SAMAMAKCIK[KOGGIEIEGAKAA?]?i@?"
+              },
+              "start_location": {
+                "lat": 343.6250153,
+                "lng": -34334.91684959999999
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "312 ft",
+                "value": 95
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 16
+              },
+              "end_location": {
+                "lat": 343.6256733,
+                "lng": -34334.9145789
+              },
+              "html_instructions": "Turn <b>right</b> onto <b>xdffdfd</b>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "i`a}Fz_rwOAsAAa@?S@E@KBQDODKFI?ABA"
+              },
+              "start_location": {
+                "lat": 343.6258116,
+                "lng": -34334.9156581
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "43 ft",
+                "value": 13
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 11
+              },
+              "end_location": {
+                "lat": 343.625756,
+                "lng": -34334.9144602
+              },
+              "html_instructions": "Turn <b>left</b><div style=\"font-size:0.9em\">Destination will be on the left</div>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "m_a}FbyqwOQW"
+              },
+              "start_location": {
+                "lat": 343.6256733,
+                "lng": -34334.9145789
+              },
+              "travel_mode": "DRIVING"
+            }
+          ],
+          "traffic_speed_entry": [],
+          "via_waypoint": []
+        }
+      ],
+      "overview_polyline": {
+        "points": "gzb}Fl{twOuBD?k@iA?u@B@lE?`@|ACtAAdEArFGvHIvIKpCAVA@YC{D?UIqNOqb@IyNCcE?yAhB@fAAf@UpBcBXUj@Q\\Eb@?b@HZPXRT[RQXOVChDC\\AAmA?i@Iq@Wk@QM_@IgA?CuB@YD]J[FKBAQW"
+      },
+      "summary": "S asdfadf Rd and W asdf St/asdf asdf Rd",
+      "warnings": [],
+      "waypoint_order": []
+    }
+  ],
+  "status": "OK"
+}
