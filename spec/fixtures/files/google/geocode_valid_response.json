@@ -1,0 +1,13 @@
+{
+  "status": "OK",
+  "results": [
+    {
+      "geometry": {
+        "location": {
+          "lat": 37.4224764,
+          "lng": -122.0842499
+        }
+      }
+    }
+  ]
+}
