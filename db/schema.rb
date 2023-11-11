@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_11_09_033252) do
+ActiveRecord::Schema[7.1].define(version: 2023_11_11_002844) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -25,7 +25,20 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_09_033252) do
     t.float "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["address1", "address2", "city", "state", "zip_code", "country", "latitude", "longitude"], name: "idx_on_address1_address2_city_state_zip_code_countr_4c18074139", unique: true
     t.index ["latitude", "longitude"], name: "index_addresses_on_latitude_and_longitude"
   end
 
+  create_table "rides", force: :cascade do |t|
+    t.bigint "start_address_id", null: false
+    t.bigint "destination_address_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["destination_address_id"], name: "index_rides_on_destination_address_id"
+    t.index ["start_address_id", "destination_address_id"], name: "index_rides_on_start_address_id_and_destination_address_id", unique: true
+    t.index ["start_address_id"], name: "index_rides_on_start_address_id"
+  end
+
+  add_foreign_key "rides", "addresses", column: "destination_address_id"
+  add_foreign_key "rides", "addresses", column: "start_address_id"
 end
