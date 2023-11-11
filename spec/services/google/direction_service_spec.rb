@@ -13,6 +13,7 @@ RSpec.describe Google::DirectionService do
 
     before do
       allow(ENV).to receive(:[]).with('GOOGLE_API_KEY').and_return(api_key)
+      allow(Rails.cache).to receive(:fetch).and_return(nil)
 
       stub_request(:get, /#{described_class::API_URL}/)
         .with(query: hash_including(destination:, origin:, key: api_key))
@@ -26,6 +27,7 @@ RSpec.describe Google::DirectionService do
       let(:response) { file_fixture('google/direction_valid_response.json').read }
 
       it 'returns the latitude and longitude' do
+        expect(Rails.cache).to receive(:fetch).once.and_call_original
         expect(subject).to eq({ distance: 2943, duration: 357 })
       end
     end
@@ -34,6 +36,7 @@ RSpec.describe Google::DirectionService do
       let(:response) { file_fixture('google/geocode_invalid_response.json').read }
 
       it 'returns null' do
+        expect(Rails.cache).to receive(:fetch).once.and_call_original
         expect(subject).to eq(nil)
       end
     end

@@ -18,12 +18,19 @@ module Google
     def lookup
       return if destination.blank? || origin.blank?
 
-      response = Net::HTTP.get(URI(full_url))
-      result = JSON.parse(response)
+      result = response
       legs_result(result['routes'][0]['legs'][0]) if result['status'] == 'OK'
     end
 
     private
+
+    def response
+      cache_key = "google_direction_#{origin}_to_#{destination}"
+      Rails.cache.fetch(cache_key, expires_in: 1.hour) do
+        response = Net::HTTP.get(URI(full_url))
+        JSON.parse(response)
+      end
+    end
 
     def legs_result(legs)
       {
