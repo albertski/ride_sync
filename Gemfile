@@ -5,6 +5,8 @@ ruby "3.2.2"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.1"
 
+gem 'dotenv-rails'
+
 gem "pg"
 
 # Use the Puma web server [https://github.com/puma/puma]
