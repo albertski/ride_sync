@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 class Address < ApplicationRecord
-  belongs_to :start_rides, class_name: 'Ride'
-  belongs_to :destination_rides, class_name: 'Ride'
+  has_many :start_rides, class_name: 'Ride'
+  has_many :destination_rides, class_name: 'Ride'
+  has_many :driver_home_addresses, class_name: 'Driver'
 
   validates :address1, :city, :state, :zip_code, presence: true
   validates_uniqueness_of :address1, scope: [:address2, :city, :state, :zip_code, :country]
