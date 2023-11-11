@@ -3,6 +3,20 @@
 require 'rails_helper'
 
 RSpec.describe Address, type: :model do
+  describe 'associations' do
+    it { should have_many(:start_rides).class_name('Ride') }
+    it { should have_many(:destination_rides).class_name('Ride') }
+    it { should have_many(:driver_home_addresses).class_name('Driver') }
+  end
+
+  describe 'validations' do
+    it { should validate_presence_of(:address1) }
+    it { should validate_presence_of(:city) }
+    it { should validate_presence_of(:state) }
+    it { should validate_presence_of(:zip_code) }
+    it { should validate_presence_of(:country) }
+  end
+
   describe 'geocoding' do
     before do
       allow(Google::GeocodeService).to receive(:lookup).with(address: full_address)
