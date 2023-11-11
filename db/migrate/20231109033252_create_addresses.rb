@@ -1,4 +1,4 @@
-class CreateAddress < ActiveRecord::Migration[7.1]
+class CreateAddresses < ActiveRecord::Migration[7.1]
   def change
     create_table :addresses do |t|
       t.string :address1
@@ -14,5 +14,6 @@ class CreateAddress < ActiveRecord::Migration[7.1]
     end
 
     add_index :addresses, [:latitude, :longitude]
+    add_index :addresses, [:address1, :address2, :city, :state, :zip_code, :country, :latitude, :longitude], unique: true
   end
 end
