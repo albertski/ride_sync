@@ -12,6 +12,10 @@ class Address < ApplicationRecord
 
   attr_accessor :geocode_address
 
+  def full_address
+    "#{address1} #{address2}, #{city}, #{state}, #{zip_code}, #{country}"
+  end
+
   private
 
   def set_coordinates
@@ -21,9 +25,5 @@ class Address < ApplicationRecord
 
     self.latitude = geolocation[:latitude]
     self.longitude = geolocation[:longitude]
-  end
-
-  def full_address
-    "#{address1} #{address2}, #{city}, #{state}, #{zip_code}, #{country}"
   end
 end

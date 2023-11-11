@@ -74,4 +74,14 @@ RSpec.describe Address, type: :model do
       end
     end
   end
+
+  describe '#full_address' do
+    let(:address) { build(:address) }
+
+    it 'comma seperates the address' do
+      full_address = "#{address.address1} #{address.address2}, #{address.city}, #{address.state}, "\
+                     "#{address.zip_code}, #{address.country}"
+      expect(address.full_address).to eq(full_address)
+    end
+  end
 end
