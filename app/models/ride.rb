@@ -6,4 +6,10 @@ class Ride < ApplicationRecord
 
   validates_uniqueness_of :start_address, scope: [:destination_address]
   validates :start_address, :destination_address, presence: true
+
+  attr_reader :driver_details
+
+  def driver_details=(driver)
+    @driver_details = RideDriverDetails.new(self, driver)
+  end
 end
