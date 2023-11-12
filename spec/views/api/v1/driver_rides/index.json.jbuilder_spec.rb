@@ -20,7 +20,8 @@ RSpec.describe 'api/v1/driver_rides/index.json.jbuilder', type: :view do
 
     expect(json).to be_a(Hash)
     expect(json['data']).to be_an(Array)
-    expect(json['total_count']).to eq(1)
+    expect(json['count']).to eq(1)
+    expect(json['total_pages']).to eq(1)
     expect(json['current_page']).to eq(1)
     expect(json['links']).to be_a(Hash)
     expect(json['links']['self']).to eq('/api/v1/driver_rides')

@@ -8,7 +8,8 @@ json.data @driver_rides do |ride|
     json.merge!(ride.driver_details.as_json.except('ride', 'driver'))
   end
 end
-json.total_count @driver_rides.total_pages
+json.count @driver_rides.count
+json.total_pages @driver_rides.total_pages
 json.current_page @driver_rides.current_page
 json.links do
   json.self request.original_fullpath
