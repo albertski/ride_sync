@@ -36,4 +36,30 @@ RSpec.describe Ride, type: :model do
       end
     end
   end
+
+  describe '.within_distance' do
+    let!(:ride1) { create(:ride, start_address: create(:address, latitude: 41.9512089, longitude: -87.6496156)) }
+    let!(:ride2) { create(:ride, start_address: create(:address, latitude: 34.1035462, longitude: -118.18016)) }
+    let!(:ride3) { create(:ride, start_address: create(:address, latitude: 41.9487195, longitude: -87.6442041)) }
+
+    context 'when user is in Chicago' do
+      context 'when search for rides within 100 miles' do
+        subject { described_class.within_distance(41.6350629, -87.9305407, 100) }
+
+        it 'should not include rides from California' do
+          expect(subject).to match_array([ride1, ride3])
+        end
+      end
+    end
+
+    context 'when user is in Chicago' do
+      context 'when search for rides within 4000 miles' do
+        subject { described_class.within_distance(41.6350629, -87.9305407, 4000) }
+
+        it 'should include rides from California' do
+          expect(subject).to match_array([ride1, ride2, ride3])
+        end
+      end
+    end
+  end
 end
