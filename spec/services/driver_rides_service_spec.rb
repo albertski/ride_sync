@@ -18,7 +18,7 @@ RSpec.describe DriverRidesService do
     end
 
     it 'returns rides sorted by score in descending order' do
-      expect(subject).to match_array([rides[1], rides[2], rides[0]])
+      expect(subject).to eq([rides[1], rides[2], rides[0]])
     end
   end
 
