@@ -7,13 +7,13 @@ class Ride < ApplicationRecord
   validates_uniqueness_of :start_address, scope: [:destination_address]
   validates :start_address, :destination_address, presence: true
 
-  scope :within_distance, lambda { |latitude, longitude, distance = 100|
+  scope :within_distance, lambda { |latitude, longitude, distance|
     where(
-      '6371.0 * acos(cos(radians(?)) * cos(radians(addresses.latitude)) * cos(radians(addresses.longitude) - '\
-      'radians(?)) + sin(radians(?)) * sin(radians(addresses.latitude))) <= ?',
+      '3959 * 2 * ASIN(SQRT(SIN((? * PI() / 180 - addresses.latitude * PI() / 180) / 2) ^ 2 + COS(? * PI() / 180) * '\
+      'COS(addresses.latitude * PI() / 180) * SIN((? * PI() / 180 - addresses.longitude * PI() / 180) / 2) ^ 2)) <= ?',
+      latitude,
       latitude,
       longitude,
-      latitude,
       distance
     ).joins(:start_address)
   }
